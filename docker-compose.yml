@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+    resume:
+        image: nginx:stable-alpine
+        volumes:
+          - ./public:/usr/share/nginx/html:ro
+        labels:
+          - "traefik.enabled=true"
+          - "traefik.backend=resume"
+          - "traefik.frontend.rule=Host:resume.ptrk.io"
+          - "traefik.port=80"
+        networks:
+          - "reverseproxy_default"
+        restart: always
+networks:
+    reverseproxy_default:
+        external:
+            name: reverseproxy_default
