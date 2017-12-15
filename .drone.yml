@@ -12,4 +12,7 @@ pipeline:
         kubernetes_token: ${KUBERNETES_TOKEN}
         deployment: resume
         container: resume
+        tag:
+            - mytag
+            - latest
         secrets: [ KUBERNETES_SERVER, KUBERNETES_CERT, KUBERNETES_TOKEN ]
