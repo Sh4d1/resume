@@ -4,7 +4,7 @@ pipeline:
         repo: sh4d1/resume
         tags: ${DRONE_COMMIT_SHA:0:8}
         username: sh4d1
-        password: ${DOCKER_PASSWORD}
+        password: ${docker_password}
     
     deploy:
         image: quay.io/honestbee/drone-kubernetes
