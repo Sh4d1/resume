@@ -7,6 +7,8 @@ pipeline:
         secrets: [ docker_password ] 
     deploy:
         image: quay.io/honestbee/drone-kubernetes
+        commands:
+            - echo $KUBERNETES_SERVER
         kubernetes_server: ${KUBERNETES_SERVER}
         kubernetes_cert: ${KUBERNETES_CERT}
         kubernetes_token: ${KUBERNETES_TOKEN}
