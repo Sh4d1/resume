@@ -1,2 +1,2 @@
 # Resume
-Hey you :) :) !
+This is my personnal resume.
