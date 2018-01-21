@@ -14,7 +14,7 @@ spec:
         spec:
             containers:
                 - name: resume
-                  image: sh4d1/resume
+                  image: sh4d1/resume:{{ build.commit }}
                   ports:
                     - containerPort: 80
                       name: resume-port
