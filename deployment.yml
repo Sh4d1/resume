@@ -13,11 +13,11 @@ spec:
                 app: resume
         spec:
             containers:
-                - name: resume
-                  image: sh4d1/resume:{{ build.commit }}
-                  ports:
-                    - containerPort: 80
-                      name: resume-port
+            - name: resume
+              image: sh4d1/resume
+              ports:
+              - containerPort: 80
+                name: resume-port
 ---
 apiVersion: v1
 kind: Service

@@ -2,12 +2,9 @@ pipeline:
     docker:
         image: plugins/docker
         repo: sh4d1/resume
-        tags: ${DRONE_COMMIT_SHA:0:8}
+        tags: latest
         username: sh4d1
         secrets: [ docker_password ] 
     deploy:
-        image: vallard/drone-kube
-        kube_server: ${KUBERNETES_SERVER}
-        kube_ca: ${KUBERNETES_CERT}
-        kube_token: ${KUBERNETES_TOKEN}
-        secrets: [ KUBERNETES_SERVER, KUBERNETES_CERT, KUBERNETES_TOKEN ]
+        image: sh4d1/drone-kubernetes
+        kubernetes_template: deployment.yaml
