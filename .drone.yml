@@ -8,5 +8,4 @@ pipeline:
     deploy:
         image: sh4d1/drone-kubernetes
         kubernetes_template: deployment.yaml
-        kubernetes_server: ${KUBERNETES_SERVER}
         secrets: [ kubernetes_server, kubernetes_cert, kubernetes_token ]
