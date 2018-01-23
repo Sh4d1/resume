@@ -7,5 +7,5 @@ pipeline:
         secrets: [ docker_password ] 
     deploy:
         image: sh4d1/drone-kubernetes
-        kubernetes_template: deployment.yaml
+        kubernetes_template: deployment.yml
         secrets: [kubernetes_server, kubernetes_cert, kubernetes_token]
